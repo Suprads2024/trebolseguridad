@@ -36,11 +36,11 @@
 <style>
  :root {
   --black: #060606;
-  --deep: #001A64;
-  --card: #00277D;
+  --deep: #040d27;
+  --card: #021b50;
   --border: rgba(243, 244, 248, 0.10);
   --gold: #1F7A1F;
-  --gold-light: #0149A9;
+  --gold-light: #012ba9;
   --gold-dim: rgba(1, 73, 169, 0.18);
   --white: #F3F4F8;
   --muted: #B8C3D6;
@@ -303,24 +303,74 @@ body.menu-open .mobile-close {
 }
 
   /* ========================= HERO ========================= */
+  /* ========================= HERO ========================= */
+#hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  background: url("img/hero.png") center center / cover no-repeat;
+}
+
+/* capa oscura para que el texto se lea bien */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(8,10,12,0.82) 0%,
+      rgba(8,10,12,0.68) 32%,
+      rgba(8,10,12,0.38) 60%,
+      rgba(8,10,12,0.18) 100%);
+  z-index: 1;
+}
+
+/* textura/luz sutil arriba de la foto */
+#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(201,168,76,0.08) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 0%, rgba(8,10,12,0.22) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-left {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 5vw;
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
   #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    overflow: hidden;
+    background-position: 72% center;
+    min-height: 100svh;
+  }
+
+  #hero::before {
+    background:
+      linear-gradient(180deg,
+        rgba(8,10,12,0.78) 0%,
+        rgba(8,10,12,0.55) 45%,
+        rgba(8,10,12,0.35) 100%);
   }
 
   .hero-left {
-    padding: 0 5vw;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    padding-top: 120px;
     justify-content: center;
-    padding-top:140px;
-    position: relative;
-    z-index: 2;
   }
-
+}
   .hero-tag {
     display: inline-flex;
     align-items: center;
@@ -436,7 +486,7 @@ body.menu-open .mobile-close {
     display: block;
   }
   .stat-label {
-    font-size: 10px;
+    font-size: 7px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--muted);
@@ -1253,7 +1303,7 @@ body.menu-open .mobile-close {
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
     .services-grid { grid-template-columns: 1fr; }
-    .hero-stats { gap: 24px; flex-wrap: wrap; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; margin-bottom: 0px; margin-top: 5px;}
     .about-pillars { grid-template-columns: 1fr; }
     .cap-grid { grid-template-columns: repeat(2, 1fr); }
     .clients-logos { grid-template-columns: 1fr 1fr; }
@@ -1261,6 +1311,10 @@ body.menu-open .mobile-close {
     .form-row { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr; gap: 40px; }
     .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+    .stat-num {
+    text-align: center;
+  }
   }
 </style>
 </head>
