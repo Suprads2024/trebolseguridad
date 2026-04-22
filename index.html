@@ -286,6 +286,7 @@ body.menu-open .mobile-close {
     height: 72px;
     padding: 0 5vw;
     padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .nav-logo-img {
@@ -390,21 +391,43 @@ body.menu-open .mobile-close {
     background: var(--gold);
   }
 
-  .hero-h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(56px, 8vw, 110px);
-    line-height: 0.92;
-    letter-spacing: 2px;
-    color: var(--white);
-    margin-bottom: 8px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.35s forwards;
-  }
-  .hero-h1 em {
-    font-style: normal;
-    color: var(--gold);
-    display: block;
-  }
+.hero-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 0.88;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.35s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-h1 .line {
+  display: block;
+  width: fit-content;
+  margin: 0;
+    margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+/* Línea 1 */
+.hero-h1 .line-1 {
+  font-size: clamp(58px, 7.2vw, 96px);
+  color: var(--white);
+}
+
+/* Línea 2: más grande para que llegue al mismo borde */
+.hero-h1 .line-2 {
+  font-size: clamp(66px, 8.1vw, 108px);
+  color: var(--white);
+}
+
+/* Línea 3 */
+.hero-h1 .line-3 {
+  font-size: clamp(64px, 7.9vw, 108px);
+  color: var(--gold);
+}
 
   .hero-sub {
     font-family: 'Cormorant Garamond', serif;
@@ -539,7 +562,7 @@ body.menu-open .mobile-close {
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--muted);
+    color: w;
     opacity: 0;
     animation: fadeIn 1s 1.2s forwards;
   }
@@ -554,7 +577,7 @@ body.menu-open .mobile-close {
     position: absolute;
     top: 0; left: -100%;
     width: 100%; height: 100%;
-    background: var(--gold);
+    background: white;
     animation: scrollAnim 2s 1.5s infinite;
   }
   @keyframes scrollAnim {
@@ -648,7 +671,7 @@ body.menu-open .mobile-close {
 
   .service-card {
     background: var(--deep);
-    padding: 48px 40px;
+    padding: 28px 20px;
     position: relative;
     overflow: hidden;
     transition: background 0.4s;
@@ -673,16 +696,25 @@ body.menu-open .mobile-close {
     letter-spacing: 3px;
     color: var(--gold);
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     opacity: 0.7;
   }
 
-  .service-icon {
-    width: 48px; height: 48px;
-    margin-bottom: 24px;
-    color: var(--gold);
-  }
-  .service-icon svg { width: 100%; height: 100%; }
+.service-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.service-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
 
   .service-name {
     font-family: 'Bebas Neue', sans-serif;
@@ -760,11 +792,14 @@ body.menu-open .mobile-close {
     border-color: var(--gold);
     background: var(--gold-dim);
   }
-  .pillar-box-icon {
-    font-size: 24px;
-    margin-bottom: 12px;
-    display: block;
-  }
+.pillar-box-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+
+}
   .pillar-box-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
@@ -866,11 +901,13 @@ body.menu-open .mobile-close {
   }
   .cap-item:hover { border-color: var(--gold); }
   .cap-item:hover::after { opacity: 1; }
-  .cap-emoji {
-    font-size: 28px;
-    position: relative;
-    z-index: 1;
-  }
+.cap-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
   .cap-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 15px;
@@ -1350,11 +1387,11 @@ body.menu-open .mobile-close {
 <section id="hero">
   <div class="hero-left">
     <div class="hero-tag">Seguridad Integral · Habilitados · Buenos Aires</div>
-    <h1 class="hero-h1">
-      Protección<br>
-      <em>sin</em>
-      Compromisos
-    </h1>
+  <h1 class="hero-h1">
+  <span class="line line-1">Protegemos</span>
+  <span class="line line-2">lo que más</span>
+  <span class="line line-3">te importa</span>
+</h1>
     <p class="hero-sub">Seguridad privada, protección ejecutiva<br>y tecnología aplicada. 24 horas, 365 días.</p>
     <div class="hero-actions">
       <a href="#contacto" class="btn-primary">
@@ -1422,7 +1459,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-1">
         <span class="service-num">01</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <img src="img/3.png" alt="Seguridad Física">
         </div>
         <div class="service-name">Seguridad Física</div>
         <p class="service-desc">Personal altamente capacitado para la vigilancia y protección en todas sus formas. Rigurosa selección, capacitación permanente y auditoría continua.</p>
@@ -1438,7 +1475,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-2">
         <span class="service-num">02</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/><path d="M12 14v8"/></svg>
+          <img src="img/13.png" alt="Protección VIP">
         </div>
         <div class="service-name">Protección VIP</div>
         <p class="service-desc">Escoltas profesionales especializados en proteger individuos y grupos de cualquier tipo de peligro. Atención 24 horas con móviles satelitales.</p>
@@ -1454,7 +1491,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-3">
         <span class="service-num">03</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/><path d="M17 10h2M5 10h2"/></svg>
+          <img src="img/4.png" alt="Tecnología Aplicada">
         </div>
         <div class="service-name">Tecnología Aplicada</div>
         <p class="service-desc">Sistemas inteligentes de seguridad electrónica diseñados como soluciones integrales, no recursos aislados. Aprovechamiento máximo del recurso tecnológico.</p>
@@ -1470,7 +1507,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-4">
         <span class="service-num">04</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <img src="img/1.png" alt="Consultoría">
         </div>
         <div class="service-name">Consultoría</div>
         <p class="service-desc">Profesionales que definen sus necesidades de seguridad y proponen planes de acción a medida. Diagnóstico integral con visión corporativa.</p>
@@ -1486,7 +1523,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-5">
         <span class="service-num">05</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <img src="img/14.png" alt="Custodia de Valores">
         </div>
         <div class="service-name">Custodia de Valores</div>
         <p class="service-desc">Traslado seguro de activos, valores y documentación sensible con personal especializado y protocolos estrictos de cadena de custodia.</p>
@@ -1502,7 +1539,7 @@ body.menu-open .mobile-close {
       <div class="service-card reveal reveal-delay-1">
         <span class="service-num">06</span>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <img src="img/15.png" alt="Monitoreo">
         </div>
         <div class="service-name">Monitoreo</div>
         <p class="service-desc">Centro de monitoreo operativo las 24 horas del día con supervisión permanente de sistemas CCTV, alarmas y posición de personal en campo.</p>
@@ -1532,23 +1569,26 @@ body.menu-open .mobile-close {
           Esta metodología nos permite ofrecer soluciones a medida que nos ubican como empresa de referencia en el mercado argentino. Habilitados y certificados para operar en todo el territorio nacional.
         </p>
         <div class="about-pillars">
-          <div class="pillar-box reveal reveal-delay-1">
-            <span class="pillar-box-icon">🎯</span>
-            <span class="pillar-box-name">Consultoría</span>
-          </div>
-          <div class="pillar-box reveal reveal-delay-2">
-            <span class="pillar-box-icon">📚</span>
-            <span class="pillar-box-name">Capacitación</span>
-          </div>
-          <div class="pillar-box reveal reveal-delay-3">
-            <span class="pillar-box-icon">🛡️</span>
-            <span class="pillar-box-name">Seguridad Física</span>
-          </div>
-          <div class="pillar-box reveal reveal-delay-4">
-            <span class="pillar-box-icon">📡</span>
-            <span class="pillar-box-name">Tecnología</span>
-          </div>
-        </div>
+  <div class="pillar-box reveal reveal-delay-1">
+    <img src="img/1.png" alt="Consultoría" class="pillar-box-icon">
+    <span class="pillar-box-name">Consultoría</span>
+  </div>
+
+  <div class="pillar-box reveal reveal-delay-2">
+    <img src="img/2.png" alt="Capacitación" class="pillar-box-icon">
+    <span class="pillar-box-name">Capacitación</span>
+  </div>
+
+  <div class="pillar-box reveal reveal-delay-3">
+    <img src="img/3.png" alt="Seguridad Física" class="pillar-box-icon">
+    <span class="pillar-box-name">Seguridad Física</span>
+  </div>
+
+  <div class="pillar-box reveal reveal-delay-4">
+    <img src="img/4.png" alt="Tecnología" class="pillar-box-icon">
+    <span class="pillar-box-name">Tecnología</span>
+  </div>
+</div>
       </div>
       <div class="about-right">
         <div class="about-visual reveal">
@@ -1579,40 +1619,47 @@ body.menu-open .mobile-close {
       </div>
       <p class="section-lead reveal">Personal entrenado con equipamiento de élite, protocolo riguroso y tecnología de punta.</p>
     </div>
-    <div class="cap-grid">
-      <div class="cap-item reveal reveal-delay-1">
-        <span class="cap-emoji">🔫</span>
-        <span class="cap-name">Armas de Fuego</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-2">
-        <span class="cap-emoji">🦺</span>
-        <span class="cap-name">Chalecos Antibalas</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-3">
-        <span class="cap-emoji">🐕</span>
-        <span class="cap-name">Perros de Ataque</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-4">
-        <span class="cap-emoji">📡</span>
-        <span class="cap-name">Equipos de Comunicación</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-1">
-        <span class="cap-emoji">🚗</span>
-        <span class="cap-name">Vehículos Blindados</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-2">
-        <span class="cap-emoji">🏍️</span>
-        <span class="cap-name">Motos de Apoyo</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-3">
-        <span class="cap-emoji">🛰️</span>
-        <span class="cap-name">Rastreo Satelital</span>
-      </div>
-      <div class="cap-item reveal reveal-delay-4">
-        <span class="cap-emoji">🎓</span>
-        <span class="cap-name">Personal Bilingüe</span>
-      </div>
-    </div>
+   <div class="cap-grid">
+  <div class="cap-item reveal reveal-delay-1">
+    <img src="img/7.png" alt="Armas de Fuego" class="cap-icon">
+    <span class="cap-name">Armas de Fuego</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-2">
+    <img src="img/9.png" alt="Chalecos Antibalas" class="cap-icon">
+    <span class="cap-name">Chalecos Antibalas</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-3">
+    <img src="img/8.png" alt="Perros de Ataque" class="cap-icon">
+    <span class="cap-name">Perros de Ataque</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-4">
+    <img src="img/5.png" alt="Equipos de Comunicación" class="cap-icon">
+    <span class="cap-name">Equipos de Comunicación</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-1">
+    <img src="img/12.png" alt="Vehículos Blindados" class="cap-icon">
+    <span class="cap-name">Vehículos Blindados</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-2">
+    <img src="img/11.png" alt="Motos de Apoyo" class="cap-icon">
+    <span class="cap-name">Motos de Apoyo</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-3">
+    <img src="img/10.png" alt="Rastreo Satelital" class="cap-icon">
+    <span class="cap-name">Rastreo Satelital</span>
+  </div>
+
+  <div class="cap-item reveal reveal-delay-4">
+    <img src="img/6.png" alt="Personal Bilingüe" class="cap-icon">
+    <span class="cap-name">Personal Bilingüe</span>
+  </div>
+</div>
   </div>
 </section>
 
@@ -1632,17 +1679,18 @@ body.menu-open .mobile-close {
             <span class="client-type">Logística</span>
           </div>
           <div class="client-box">
-            <span class="client-name">FIDEICOMISO VERASUL</span>
-            <span class="client-type">Barrio — Pilar</span>
+            <span class="client-name">ALTOS DEL MANZANARES</span>
+            <span class="client-type">Barrio Privado — Pilar</span>
+          </div>
+           <div class="client-box">
+            <span class="client-name">LOS ALAMOS</span>
+            <span class="client-type">Barrio Privado — Pilar</span>
           </div>
           <div class="client-box">
             <span class="client-name">EMPRESA CLARO</span>
             <span class="client-type">Instalaciones</span>
           </div>
-          <div class="client-box">
-            <span class="client-name">BLU</span>
-            <span class="client-type">Barrio — Pilar</span>
-          </div>
+         
           <div class="client-box">
             <span class="client-name">REG. PROP. AUTOMOTOR</span>
             <span class="client-type">San Isidro — Pcia Bs As</span>
