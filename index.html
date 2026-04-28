@@ -52,7 +52,63 @@
       --muted: #B8C3D6;
       --accent: #1F7A1F;
     }
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 64px;
+    height: 64px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+    animation: whatsappPulse 2s infinite;
+    text-decoration: none;
+  }
 
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+  }
+
+  .whatsapp-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+  }
+
+  @keyframes whatsappPulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+    }
+
+    70% {
+      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 58px;
+      height: 58px;
+      right: 18px;
+      bottom: 18px;
+    }
+
+    .whatsapp-icon {
+      width: 31px;
+      height: 31px;
+    }
+  }
     *,
     *::before,
     *::after {
@@ -108,42 +164,86 @@
       border-bottom: 1px solid var(--border);
 
     }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  position: relative;
+  z-index: 1001;
+}
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      position: relative;
-      z-index: 1001;
-    }
+.nav-logo-img {
+  height: 68px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 
-    .nav-logo-img {
-      height: 62px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  white-space: nowrap;
+}
 
-    .nav-logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
+.nav-logo-text span:first-child {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 
-    .nav-logo-text span:first-child {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 17px;
-      letter-spacing: 3px;
-      color: var(--white);
-    }
+.nav-logo-text span:last-child {
+  margin-top: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 
-    .nav-logo-text span:last-child {
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-logo {
+    gap: 10px;
+  }
 
+  .nav-logo-img {
+    height: 54px;
+  }
+
+  .nav-logo-text span:first-child {
+    font-size: 20px;
+    letter-spacing: 1.4px;
+  }
+
+  .nav-logo-text span:last-child {
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-logo-img {
+    height: 48px;
+  }
+
+  .nav-logo-text span:first-child {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .nav-logo-text span:last-child {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}
     .nav-links {
       display: flex;
       gap: 40px;
@@ -183,8 +283,8 @@
     }
 
     .nav-cta {
-      background: transparent;
-      border: 1px solid white;
+      background: rgb(178, 9, 9);
+      
       color: white;
       padding: 10px 24px;
       font-size: 11px;
@@ -196,7 +296,7 @@
     }
 
     .nav-cta:hover {
-      background: var(--gold);
+      background: rgb(96, 10, 10);
       color: white;
     }
 
@@ -340,10 +440,10 @@
       inset: 0;
       background:
         linear-gradient(90deg,
-          rgba(8, 10, 12, 0.82) 0%,
-          rgba(8, 10, 12, 0.68) 32%,
-          rgba(8, 10, 12, 0.38) 60%,
-          rgba(8, 10, 12, 0.18) 100%);
+          rgba(8, 10, 12, 0.62) 0%,
+          rgba(8, 10, 12, 0.48) 32%,
+          rgba(8, 10, 12, 0.14) 60%,
+          rgba(8, 10, 12, 0.04) 100%);
       z-index: 1;
     }
 
@@ -1024,7 +1124,181 @@
       margin-top: 9px;
       flex-shrink: 0;
     }
+/* ================================
+   SERVICIOS ARGENTINA - COMPACTO
+================================ */
 
+.ts-argentina-services {
+  --deep: #040d27;
+  --card: rgba(2, 27, 80, 0.42);
+  --border: rgba(255, 255, 255, 0.12);
+  --blue: #012ba9;
+  --blue-soft: rgba(1, 43, 169, 0.28);
+  --white: #ffffff;
+  --text: rgba(255, 255, 255, 0.82);
+
+  position: relative;
+  overflow: hidden;
+  padding: 70px 5vw;
+  color: var(--white);
+
+  background:
+    linear-gradient(135deg, rgba(4, 13, 39, 0.92), rgba(0, 0, 0, 0.86)),
+    url("URL-DE-TU-IMAGEN.jpg") center / cover no-repeat;
+}
+
+.ts-argentina-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(1, 43, 169, 0.18), transparent 34%),
+    linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.48));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ts-argentina-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ts-argentina-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 38px;
+}
+
+.ts-argentina-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ts-argentina-header h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(26px, 3.4vw, 42px);
+  line-height: 1.14;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+/* Lista */
+.ts-argentina-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ts-argentina-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    var(--card);
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.ts-argentina-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(1, 43, 169, 0.46);
+  background:
+    linear-gradient(145deg, rgba(1, 43, 169, 0.18), rgba(255,255,255,0.03)),
+    rgba(2, 27, 80, 0.55);
+}
+
+.ts-argentina-item span {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  margin-top: 2px;
+  background: linear-gradient(135deg, var(--blue), #1c3674);
+  box-shadow: 0 0 18px rgba(1, 43, 169, 0.42);
+  position: relative;
+}
+
+.ts-argentina-item span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ts-argentina-item p {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .ts-argentina-services {
+    padding: 60px 22px;
+  }
+
+  .ts-argentina-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-argentina-header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ts-argentina-services {
+    padding: 54px 16px;
+  }
+
+  .ts-argentina-header h2 {
+    font-size: clamp(24px, 8vw, 21px);
+  }
+
+  .ts-argentina-label {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+  }
+
+  .ts-argentina-item {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .ts-argentina-item p {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+}
     /* ========================= NOSOTROS / EMPRESA ========================= */
     #nosotros {
       padding: 140px 0;
@@ -1199,11 +1473,12 @@
     }
 
     .cap-icon {
-      width: 30px;
-      height: 30px;
+      width: 65px;
+      height: 65px;
       object-fit: contain;
       display: block;
       flex-shrink: 0;
+      border-radius: 50%;
     }
 
     .cap-name {
@@ -1407,7 +1682,7 @@
     .contact-icon {
       width: 40px;
       height: 40px;
-      border: 1px solid var(--gold);
+      border: 1px solid white;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1417,7 +1692,7 @@
     .contact-icon svg {
       width: 18px;
       height: 18px;
-      color: var(--gold);
+      color: white;
     }
 
     .contact-label {
@@ -1539,9 +1814,9 @@
 
     .form-input {
       width: 100%;
-      background: var(--deep);
+      background: white;
       border: 1px solid var(--border);
-      color: var(--white);
+      color: black;
       padding: 14px 18px;
       font-size: 14px;
       font-family: 'DM Sans', sans-serif;
@@ -1606,9 +1881,10 @@
     }
 
     .footer-brand-desc {
-      font-size: 13px;
+      font-size: 16px;
       line-height: 1.8;
-      color: var(--muted);
+      color: white;
+      font-weight: 7000;
       margin-top: 20px;
     }
 
@@ -1890,7 +2166,19 @@
 </head>
 
 <body>
-
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a 
+  href="https://wa.me/5491165074745?text=Hola%20*Tr%C3%A9bol%20Seguridad%20S.R.L*.%20Necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Tr%C3%A9bol%20Seguridad%20S.R.L%20https%3A%2F%2Ftrebolseguridad.com.ar%2F" 
+  class="whatsapp-float" 
+  target="_blank" 
+  aria-label="Enviar mensaje por WhatsApp"
+>
+  <img 
+    src="img/whatsapp (2).png" 
+    alt="WhatsApp" 
+    class="whatsapp-icon"
+  >
+</a>
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">✕</button>
@@ -1903,8 +2191,13 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#" class="nav-logo">
-      <img src="img/logo-verde.png" alt="Trébol Seguridad" class="nav-logo-img">
-    </a>
+  <img src="img/logo-verde.png" alt="Trébol Seguridad" class="nav-logo-img">
+
+  <div class="nav-logo-text">
+    <span>TRÉBOL SEGURIDAD S.R.L</span>
+    <span>SEGURIDAD PRIVADA</span>
+  </div>
+</a>
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
@@ -1920,7 +2213,7 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <div class="hero-tag">Seguridad Integral · Habilitados · Buenos Aires</div>
+      <div class="hero-tag">TREBOL SEGURIDAD</div>
       <h1 class="hero-h1">
         <span class="line line-1">SEGURIDAD PRIVADA</span>
         <span class="line line-1">Y PROTECCIÓN EJECUTIVA</span>
@@ -2201,47 +2494,97 @@
       </div>
       <div class="cap-grid">
         <div class="cap-item reveal reveal-delay-1">
-          <img src="img/7.png" alt="Armas de Fuego" class="cap-icon">
+          <img src="img/armas-de-fuego.jpg" alt="Armas de Fuego" class="cap-icon">
           <span class="cap-name">Armas de Fuego</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-2">
-          <img src="img/9.png" alt="Chalecos Antibalas" class="cap-icon">
+          <img src="img/chaleco.png" alt="Chalecos Antibalas" class="cap-icon">
           <span class="cap-name">Chalecos Antibalas</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-3">
-          <img src="img/8.png" alt="Perros de Ataque" class="cap-icon">
+          <img src="img/525151e73aac5fa69f7d4e43c4c932c4.jpg" alt="Perros de Ataque" class="cap-icon">
           <span class="cap-name">Perros de Ataque</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-4">
-          <img src="img/5.png" alt="Equipos de Comunicación" class="cap-icon">
+          <img src="img/equipos-de-com.jpg" alt="Equipos de Comunicación" class="cap-icon">
           <span class="cap-name">Equipos de Comunicación</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-1">
-          <img src="img/12.png" alt="Vehículos Blindados" class="cap-icon">
+          <img src="img/autos-blindados.jpg" alt="Vehículos Blindados" class="cap-icon">
           <span class="cap-name">Vehículos Blindados</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-2">
-          <img src="img/11.png" alt="Motos de Apoyo" class="cap-icon">
+          <img src="img/motos.jpg" alt="Motos de Apoyo" class="cap-icon">
           <span class="cap-name">Motos de Apoyo</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-3">
-          <img src="img/10.png" alt="Rastreo Satelital" class="cap-icon">
-          <span class="cap-name">Rastreo Satelital</span>
+          <img src="img/personal-entrenado.jpg" alt="Personal Entrenado" class="cap-icon">
+          <span class="cap-name">Personal Entrenado</span>
         </div>
 
         <div class="cap-item reveal reveal-delay-4">
-          <img src="img/6.png" alt="Personal Bilingüe" class="cap-icon">
-          <span class="cap-name">Personal Bilingüe</span>
+          <img src="img/´.png" alt="Tecnologia Aplicada" class="cap-icon">
+          <span class="cap-name">Tecnologia Aplicada</span>
         </div>
       </div>
     </div>
   </section>
+
+<section class="ts-argentina-services" id="servicios-argentina">
+  <div class="ts-argentina-bg"></div>
+
+  <div class="ts-argentina-container">
+    <div class="ts-argentina-header">
+      <span class="ts-argentina-label">Experiencia institucional</span>
+      <h2>Algunos de nuestros servicios en Argentina</h2>
+    </div>
+
+    <div class="ts-argentina-list">
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al Sr. Alan Meeker de los EE.UU. en Argentina los días 27, 28 y 29 de Julio de 2019 en Four Seasons Hotel.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al ex Presidente de Uruguay Sr. Mujica en Buenos Aires.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al Candidato a Presidente de Argentina Dr. Alberto Fernández en la Universidad 3 de Febrero.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al Candidato a Primer Concejal por La Matanza Sr. Arturo Ter Akopian.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>A la Candidata a Segunda Diputada Nacional Sra. Carolina Castro en el Partido de La Matanza.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al Candidato a Primer Diputado Nacional Sr. Florencio Randazzo en el Partido de La Matanza.</p>
+      </div>
+
+      <div class="ts-argentina-item">
+        <span></span>
+        <p>Al Candidato a Primer Diputado Provincial Sr. Nicolas Terrera en el Partido de La Matanza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- CLIENTES -->
   <section id="clientes">
