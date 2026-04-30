@@ -2824,6 +2824,14 @@
         text-align: center;
       }
     }
+
+    .hero-subtitle {
+  max-width: 620px;
+margin-bottom: 20px;
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
   </style>
 </head>
 
@@ -2837,10 +2845,10 @@
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">✕</button>
     <a href="#top" onclick="closeMobile()">Inicio</a>
-    <a href="#servicios" onclick="closeMobile()">Servicios</a>
-    <a href="#nosotros" onclick="closeMobile()">Nosotros</a>
+    <a href="index.html#servicios" onclick="closeMobile()">Servicios</a>
+    <a href="index.html#nosotros" onclick="closeMobile()">Nosotros</a>
 
-    <a href="#contacto" onclick="closeMobile()">Contacto</a>
+    <a href="index.html#contacto" onclick="closeMobile()">Contacto</a>
   </div>
 
   <!-- NAV -->
@@ -2856,9 +2864,9 @@
 
     <ul class="nav-links">
       <li><a href="#top">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
 
       <!-- Redes en desktop -->
       <li class="nav-socials nav-socials-desktop">
@@ -2900,53 +2908,37 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-left">
-      <div class="hero-tag">TREBÓL SEGURIDAD</div>
-      <h1 class="hero-h1">
-        <span class="line line-1">SEGURIDAD PRIVADA</span>
-        <span class="line line-1">Y PROTECCIÓN EJECUTIVA</span>
+<!-- HERO / AGRADECIMIENTO -->
+<section id="hero">
+  <div class="hero-left">
 
-      </h1>
-      <ul class="hero-list">
-        <li>Vigilancia</li>
-        <li>Custodia mercadería en tránsito</li>
-        <li>Custodias de valores</li>
-        <li>Custodias VIP</li>
-        <li>Seguridad electrónica</li>
-        <li>Monitoreo</li>
-      </ul>
-      <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">
-          Solicitar Asesoramiento
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <a href="#servicios" class="btn-ghost">Ver Servicios</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">24/7</span>
-          <span class="stat-label">Operativos</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">+20</span>
-          <span class="stat-label">Sectores atendidos</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">4</span>
-          <span class="stat-label">Ejes de servicio</span>
-        </div>
-      </div>
+    <div class="hero-tag">TRÉBOL SEGURIDAD S.R.L</div>
+
+    <h1 class="hero-h1">
+      <span class="line line-1">GRACIAS POR</span>
+      <span class="line line-1">COMUNICARTE</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Recibimos tu consulta correctamente.  
+      Nuestro equipo se pondrá en contacto con vos a la brevedad para brindarte el asesoramiento que necesitás.
+    </p>
+
+    <div class="hero-actions">
+      <a href="index.html" class="btn-primary">
+        Volver al inicio
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <a href="index.html#servicios" class="btn-ghost">
+        Ver Servicios
+      </a>
     </div>
 
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- PILLAR STRIP -->
   <div id="pillar">
@@ -2971,509 +2963,7 @@
     </div>
   </div>
 
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-tag">Lo que hacemos</div>
-        <h2 class="section-title">Nuestros <em>Servicios</em></h2>
-        <p class="section-lead">Cuatro ejes de trabajo que combinan el capital humano, los procedimientos y la
-          tecnología para proteger lo que más importa.</p>
-      </div>
 
-      <div class="services-grid">
-        <!-- 1 -->
-        <div class="service-card reveal reveal-delay-1">
-          <span class="service-num">01</span>
-          <div class="service-icon">
-            <img src="img/3.png" alt="Seguridad Física">
-          </div>
-          <div class="service-name">Seguridad Física</div>
-          <p class="service-desc">Personal altamente capacitado para la vigilancia y protección en todas sus formas.
-            Rigurosa selección, capacitación permanente y auditoría continua.</p>
-          <ul class="service-list">
-            <li>Servicio de vigilancia</li>
-            <li>Eventos públicos y privados</li>
-            <li>Eventos deportivos</li>
-            <li>Custodia de mercadería en tránsito</li>
-          </ul>
-        </div>
-
-        <!-- 2 -->
-        <div class="service-card reveal reveal-delay-2">
-          <span class="service-num">02</span>
-          <div class="service-icon">
-            <img src="img/13.png" alt="Protección VIP">
-          </div>
-          <div class="service-name">Protección VIP</div>
-          <p class="service-desc">Escoltas profesionales especializados en proteger individuos y grupos de cualquier
-            tipo de peligro. Atención 24 horas con móviles satelitales.</p>
-          <ul class="service-list">
-            <li>Escoltas bilingües y expertos en artes marciales</li>
-            <li>Móviles equipados con rastreo satelital</li>
-            <li>Inspección de vehículos y rutas de escape</li>
-            <li>Monitoreo constante del cliente</li>
-          </ul>
-        </div>
-
-        <!-- 3 -->
-        <div class="service-card reveal reveal-delay-3">
-          <span class="service-num">03</span>
-          <div class="service-icon">
-            <img src="img/4.png" alt="Tecnología Aplicada">
-          </div>
-          <div class="service-name">Tecnología Aplicada</div>
-          <p class="service-desc">Sistemas inteligentes de seguridad electrónica diseñados como soluciones integrales,
-            no recursos aislados. Aprovechamiento máximo del recurso tecnológico.</p>
-          <ul class="service-list">
-            <li>CCTV / Cámaras IP & monitoreo de alarmas</li>
-            <li>Cercos eléctricos y botones antipánico</li>
-            <li>Control de acceso y rastreo satelital</li>
-            <li>Detección de incendios y sensores</li>
-          </ul>
-        </div>
-
-        <!-- 4 -->
-        <div class="service-card reveal reveal-delay-4">
-          <span class="service-num">04</span>
-          <div class="service-icon">
-            <img src="img/1.png" alt="Consultoría">
-          </div>
-          <div class="service-name">Consultoría</div>
-          <p class="service-desc">Profesionales que definen sus necesidades de seguridad y proponen planes de acción a
-            medida. Diagnóstico integral con visión corporativa.</p>
-          <ul class="service-list">
-            <li>Auditorías internas y externas de seguridad</li>
-            <li>Análisis de riesgo e inteligencia competitiva</li>
-            <li>Protocolos de evacuación e incendios</li>
-            <li>Prevención de pérdidas y protección de activos</li>
-          </ul>
-        </div>
-
-        <!-- 5 -->
-        <div class="service-card reveal reveal-delay-5">
-          <span class="service-num">05</span>
-          <div class="service-icon">
-            <img src="img/14.png" alt="Custodia de Valores">
-          </div>
-          <div class="service-name">Custodia de Valores</div>
-          <p class="service-desc">Traslado seguro de activos, valores y documentación sensible con personal
-            especializado y protocolos estrictos de cadena de custodia.</p>
-          <ul class="service-list">
-            <li>Traslado de valores y documentos</li>
-            <li>Mercadería de alto valor</li>
-            <li>Coordinación logística integral</li>
-            <li>Comunicación en tiempo real</li>
-          </ul>
-        </div>
-
-        <!-- 6 -->
-        <div class="service-card reveal reveal-delay-1">
-          <span class="service-num">06</span>
-          <div class="service-icon">
-            <img src="img/15.png" alt="Monitoreo">
-          </div>
-          <div class="service-name">Monitoreo</div>
-          <p class="service-desc">Centro de monitoreo operativo las 24 horas del día con supervisión permanente de
-            sistemas CCTV, alarmas y posición de personal en campo.</p>
-          <ul class="service-list">
-            <li>Monitoreo de alarmas CCTV</li>
-            <li>Supervisión de móviles satelitales</li>
-            <li>Comunicación directa con personal</li>
-            <li>Respuesta inmediata ante incidentes</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOSOTROS -->
-  <section id="nosotros">
-    <div class="container">
-      <div class="about-wrap">
-        <div class="about-left">
-          <div class="reveal">
-            <div class="section-tag">La empresa</div>
-            <h2 class="section-title">Seguridad <em>integral</em> como filosofía</h2>
-          </div>
-          <p class="about-body reveal">
-            Trébol Seguridad S.R.L está integrada por un grupo de especialistas con amplia experiencia y capacitación. A
-            diferencia de otras empresas, trabajamos con el concepto de <strong style="color:var(--white)">seguridad
-              integral</strong>: el mejor equilibrio entre recurso humano, procedimientos y tecnología aplicada.
-            <br><br>
-            Esta metodología nos permite ofrecer soluciones a medida que nos ubican como empresa de referencia en el
-            mercado argentino. Habilitados y certificados para operar en todo el territorio nacional.
-          </p>
-          <div class="about-pillars">
-            <div class="pillar-box reveal reveal-delay-1">
-              <img src="img/1.png" alt="Consultoría" class="pillar-box-icon">
-              <span class="pillar-box-name">Consultoría</span>
-            </div>
-
-            <div class="pillar-box reveal reveal-delay-2">
-              <img src="img/2.png" alt="Capacitación" class="pillar-box-icon">
-              <span class="pillar-box-name">Capacitación</span>
-            </div>
-
-            <div class="pillar-box reveal reveal-delay-3">
-              <img src="img/3.png" alt="Seguridad Física" class="pillar-box-icon">
-              <span class="pillar-box-name">Seguridad Física</span>
-            </div>
-
-            <div class="pillar-box reveal reveal-delay-4">
-              <img src="img/4.png" alt="Tecnología" class="pillar-box-icon">
-              <span class="pillar-box-name">Tecnología</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-right">
-          <div class="about-visual reveal">
-            <div class="about-big-num">TS</div>
-            <div class="about-card about-card-1">
-              <span class="about-card-badge">Nuestro ADN</span>
-              <p class="about-card-text">"Profesionales expertos en artes marciales, bilingües, con móviles totalmente
-                equipados con sistemas satelitales."</p>
-              <p class="about-card-sub">— Plantel Operativo Trébol Seguridad</p>
-            </div>
-            <div class="about-card about-card-2">
-              <span class="about-card-badge">Clientes distinguidos</span>
-              <p class="about-card-text">Custodia a ex Presidentes, candidatos nacionales y ejecutivos internacionales
-                en Argentina.</p>
-              <p class="about-card-sub">Mujica · Alberto Fernández · Alan Meeker (EE.UU) · Four Seasons 2019</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPACIDADES -->
-  <section id="capacidades">
-    <div class="container">
-      <div class="cap-header">
-        <div class="reveal">
-
-          <h2 class="section-title">Equipamiento</h2>
-        </div>
-        <p class="section-lead reveal">Personal entrenado con equipamiento de élite, protocolo riguroso y tecnología de
-          punta.</p>
-      </div>
-      <div class="cap-grid">
-        <div class="cap-item reveal reveal-delay-1">
-          <img src="img/armas-de-fuego.jpg" alt="Armas de Fuego" class="cap-icon">
-          <span class="cap-name">Armas de Fuego</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-2">
-          <img src="img/chaleco.png" alt="Chalecos Antibalas" class="cap-icon">
-          <span class="cap-name">Chalecos Antibalas</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-3">
-          <img src="img/525151e73aac5fa69f7d4e43c4c932c4.jpg" alt="Perros de Ataque" class="cap-icon">
-          <span class="cap-name">Perros de Ataque</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-4">
-          <img src="img/equipos-de-com.jpg" alt="Equipos de Comunicación" class="cap-icon">
-          <span class="cap-name">Equipos de Comunicación</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-1">
-          <img src="img/autos-blindados.jpg" alt="Vehículos Blindados" class="cap-icon">
-          <span class="cap-name">Vehículos Blindados</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-2">
-          <img src="img/motos.jpg" alt="Motos de Apoyo" class="cap-icon">
-          <span class="cap-name">Motos de Apoyo</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-3">
-          <img src="img/personal-entrenado.jpg" alt="Personal Entrenado" class="cap-icon">
-          <span class="cap-name">Personal Entrenado</span>
-        </div>
-
-        <div class="cap-item reveal reveal-delay-4">
-          <img src="img/´.png" alt="Tecnologia Aplicada" class="cap-icon">
-          <span class="cap-name">Tecnologia Aplicada</span>
-        </div>
-        <div class="cap-item reveal reveal-delay-4">
-          <img src="img/noletal.png" alt="Armas no letales" class="cap-icon">
-          <span class="cap-name">Armas no letales</span>
-        </div>
-        <div class="cap-item reveal reveal-delay-4">
-          <img src="img/carrito.png" alt="Carrito" class="cap-icon">
-          <span class="cap-name">Carrito de Melex
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="habilitaciones-section">
-    <div class="habilitaciones-container">
-
-      <h2 class="habilitaciones-title">ESTAMOS HABILITADOS EN</h2>
-
-      <div class="habilitaciones-logos">
-        <div class="habilitacion-logo">
-          <img src="img/lgos/4.png" alt="Gobierno de la Provincia de Buenos Aires">
-        </div>
-
-        <div class="habilitacion-logo">
-          <img src="img/lgos/3.png" alt="Buenos Aires Ciudad">
-        </div>
-
-        <div class="habilitacion-logo logo-renar">
-          <img src="img/lgos/1.png" alt="RENAR Registro Nacional de Armas">
-        </div>
-
-        <div class="habilitacion-logo logo-arca">
-          <img src="img/lgos/2.png" alt="ARCA">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="ts-argentina-services" id="servicios-argentina">
-    <div class="ts-argentina-bg"></div>
-
-    <div class="ts-argentina-container">
-      <div class="ts-argentina-header">
-        <span class="ts-argentina-label">Experiencia institucional</span>
-        <h2>Algunos de nuestros servicios en Argentina</h2>
-      </div>
-
-      <div class="ts-argentina-list">
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al Sr. Alan Meeker de los EE.UU. en Argentina los días 27, 28 y 29 de Julio de 2019 en Four Seasons Hotel.
-          </p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al ex Presidente de Uruguay Sr. Mujica en Buenos Aires.</p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al Candidato a Presidente de Argentina Dr. Alberto Fernández en la Universidad 3 de Febrero.</p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al Candidato a Primer Concejal por La Matanza Sr. Arturo Ter Akopian.</p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>A la Candidata a Segunda Diputada Nacional Sra. Carolina Castro en el Partido de La Matanza.</p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al Candidato a Primer Diputado Nacional Sr. Florencio Randazzo en el Partido de La Matanza.</p>
-        </div>
-
-        <div class="ts-argentina-item">
-          <span></span>
-          <p>Al Candidato a Primer Diputado Provincial Sr. Nicolas Terrera en el Partido de La Matanza.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- LUGARES DONDE ATENDEMOS -->
-  <section id="lugares-atendemos" class="ts-lugares-section">
-    <div class="container">
-
-      <div class="ts-section-head reveal">
-
-        <h2 class="section-title">clientes que confiaron en Trébol Seguridad</h2>
-
-      </div>
-
-      <div class="ts-lugares-grid reveal">
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">ABRAFER SRL</span>
-          <span class="ts-lugar-type">Logística</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">ALTOS DEL MANZANARES</span>
-          <span class="ts-lugar-type">Barrio Privado — Pilar</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">LOS ALAMOS</span>
-          <span class="ts-lugar-type">Barrio Privado — Pilar</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">EMPRESA CLARO</span>
-          <span class="ts-lugar-type">Instalaciones</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">REG. PROP. AUTOMOTOR</span>
-          <span class="ts-lugar-type">San Isidro — Pcia. Bs. As.</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">FOUR SEASONS</span>
-          <span class="ts-lugar-type">Custodia Ejecutiva</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">BLUE DE PILAR</span>
-          <span class="ts-lugar-type">Barrio privado</span>
-        </div>
-
-        <div class="ts-lugar-card">
-          <span class="ts-lugar-name">FIDEICOMISO VERA AZUL</span>
-          <span class="ts-lugar-type">Custodia Ejecutiva</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SECTORES QUE ATENDEMOS -->
-  <section id="sectores-atendemos" class="ts-sectores-section">
-    <div class="container">
-
-      <div class="ts-section-head reveal">
-        <div class="section-tag">Áreas de servicio</div>
-        <h2 class="section-title">Sectores que atendemos</h2>
-        <p class="ts-section-subtitle">
-          Adaptamos nuestros servicios a distintos entornos, necesidades operativas y niveles de seguridad.
-        </p>
-      </div>
-
-      <div class="ts-sectores-grid reveal">
-        <div class="ts-sector-tag">Domicilios</div>
-        <div class="ts-sector-tag">Consorcios</div>
-        <div class="ts-sector-tag">Hoteles</div>
-        <div class="ts-sector-tag">B. Privados</div>
-        <div class="ts-sector-tag">Escuelas</div>
-        <div class="ts-sector-tag">Universidades</div>
-        <div class="ts-sector-tag">Comercios</div>
-        <div class="ts-sector-tag">Fábricas</div>
-        <div class="ts-sector-tag">Shoppings</div>
-        <div class="ts-sector-tag">Bancos</div>
-        <div class="ts-sector-tag">Aeropuertos</div>
-        <div class="ts-sector-tag">Puertos</div>
-        <div class="ts-sector-tag">Restaurants</div>
-        <div class="ts-sector-tag">Eventos</div>
-        <div class="ts-sector-tag">Oficinas</div>
-        <div class="ts-sector-tag">Estaciones</div>
-        <div class="ts-sector-tag">E. Deportivos</div>
-        <div class="ts-sector-tag">Subtes</div>
-      </div>
-
-    </div>
-  </section>
-  <!-- CTA BANNER -->
-  <section id="cta-banner">
-    <div class="cta-title reveal">¿Necesita protección?<br>Nosotros tenemos la solución.</div>
-    <p class="cta-sub reveal">Solicite un asesoramiento gratuito. Sin compromisos.</p>
-    <div class="cta-actions reveal">
-      <a href="tel:5491165074745" class="btn-dark">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path
-            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.29 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l1.4-1.4a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.9v2.02z" />
-        </svg>
-        +54 9 11 6507-4745
-      </a>
-      <a href="#contacto" class="btn-dark">Enviar consulta</a>
-    </div>
-  </section>
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto-section">
-
-
-
-    <!-- BARRA DE DATOS -->
-    <div class="contacto-info-bar">
-      <!-- ENCABEZADO AZUL -->
-      <div class="contacto-title-bar">
-        <h2>Contacto</h2>
-      </div>
-    </div>
-
-    <!-- FORMULARIO + MAPA -->
-    <div class="contacto-content">
-      <div class="contacto-content-inner">
-
-        <!-- Formulario -->
-        <div class="contacto-form-box">
-          <h3>¿Tenés consultas?</h3>
-          <p>Completa el formulario y nos comunicaremos.</p>
-          <form class="contacto-form" action="mail.php" method="POST">
-            <div class="form-group full">
-              <input type="text" name="nombre" placeholder="Nombre / Empresa" required>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Email" required>
-              </div>
-
-              <div class="form-group">
-                <input type="tel" name="telefono" placeholder="Teléfono">
-              </div>
-            </div>
-
-            <div class="form-checks">
-              <span>Quiero recibir información sobre:</span>
-
-              <label>
-                <input type="checkbox" name="interes[]" value="Vigilancia">
-                Vigilancia
-              </label>
-
-              <label>
-                <input type="checkbox" name="interes[]" value="Custodias">
-                Custodias
-              </label>
-
-              <label>
-                <input type="checkbox" name="interes[]" value="Asesoramiento">
-                Asesoramiento
-              </label>
-            </div>
-
-            <div class="form-group full">
-              <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-            </div>
-
-            <button type="submit" class="contacto-submit">Enviar</button>
-          </form>
-
-
-        </div>
-
-        <!-- Mapa -->
-
-        <div class="contacto-map-box">
-          <h3 class="contacto-donde">Donde estamos..</h3>
-          <iframe
-            src="https://www.google.com/maps?q=Victor%20Vergani%20652%20Pilar%20Buenos%20Aires%20Argentina&output=embed"
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
 
   <!-- FOOTER -->
   <footer class="trebol-footer">
